@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Imagens | HTML</title>
+</head>
+
+<body>
+    <h1>Trabalhando com Imagens</h1>
+    <hr>
+
+    <p>Trabalhando com o elemento &lt;img&gt;</p>
+    <img src="civic-bolado.jpg" alt="civic bolado" width="400px" height="400px">
+
+    <p>Entendendo os atributos:</p>
+    <ul>
+        <li><strong>src</strong>: Source/fonte; é o caminho onde a imagem esta armazenada. Pode ser um caminho local ou um link direto da internet..</li>
+
+        <li> <strong>alt</strong>: Alternative text/texto alternativo; É uma breve descrição da imagem. É crucial para <strong> Acessibilidade</strong> e como fallback</li>
+    </ul>
+    
+    <h2> Trabalhando com recursos externos</h2>
+    <p> Configurando imagens externas</p>
+
+    <img src="https://images.unsplash.com/photo-1788371642972-cd2eda4805ac?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flores rosas e  butterfly beauty" width="400px" height="400px">
+
+
+    <h2> Outras abordagens</h2>
+    <h3> Elemento Figure</h3>
+    <figure>
+        <img src="civic-bolado.jpg" alt="civic bolado" width="400px" height="400px">
+
+        <figcaption>Figura 1: Civic bolado - Foto: John Doe</figcaption>
+    </figure>
+
+    <h3> Elemento Picture</h3>
+   <p> Utilizando o elemento &lt;picture&gt; serve para controlarmos qual arquivo sewrá utilizado de acordo com determinadas condiçôes. </p>
+   <picture>
+    <source srcset="civic-bolado.jpg" media="(max-width: 401px)">
+
+    <source media="(min-width: 401px)" srcset="civic-bolado.jpg">
+
+    <!-- img como fallback (plano B) - Caso não seja possivel utilizar alguma imagem configurada no source acima, o navegador entrega a imagem do img. -->
+     <img src="civic-bolado.jpg" alt="civic bolado" width="400px" height="400px">
+    </picture>
+
+    <hr>
+    <h2> Sobre os tipos de imagens</h2>
+    <p>Você pode encontrar um acervo muito grande de tipos de imagens. A escolha da imagem certs pode elevar a perfomance do seu site. Veja a lista abaixo:</p>
+    <ul>
+        <li><strong>JPEG/JPG: </strong> Bom para fotografia, produtos fotografados, imagens com muitas cores e detalhes. Se você tentar otimizar demais, a perda de qualidade se torna visível.
+
+        <li><strong>PNG:</strong> Suporta e é muito bom para imagens que precisam preservas certos detalhes, como por exemplo: logos, imagens que precisam de transparencia e etc. </li>
+
+        <li> <strong> WEBP: </strong>Formato recente de desenvolvido com foco na web. Além de também suportar transparencia, tambem consegue trabalhar imagens em alta definição. Excelente escolha para fotografias, imagens de produtos, imagens com transparência e imagens gerais.</li>
+        
+        <li> <strong> AVIF: </strong>
+            È um formato moderno de imagem mais recente e também muito eficiente. È excelente, para fotografias, imagens grandes, sites onde desempenho e economia de dados são extremamente importantes.</li>
+
+
+        <li><strong> SVG: </strong>È um formato vetorial, excelente para logos, ícones, simbolos e etc.</li>
+
+    </ul>
+
+</body>
+</html>
